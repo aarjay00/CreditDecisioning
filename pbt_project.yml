@@ -4,7 +4,13 @@ description: 'Integrate buy now pay later data, tradelines, and reported income 
 version: 1.0.6
 author: sparklearner123@gmail.com
 language: python
-buildSystem: wheel
+buildSystem: ''
+buildSystemDetails:
+  artefactID: creditdecisioningv1
+  parentArtefactID: rohitjainsimpledatalabs.com_team
+  buildSystem: wheel
+  author: null
+  createdAt: '2023-03-24 09:25:48'
 pipelines:
   pipelines/CreateMetricsII:
     name: DecisionAndAudit
@@ -12,6 +18,7 @@ pipelines:
       types 1, 2, and 3.
     author: sparklearner123@gmail.com
     mode: batch
+    artefactID: ''
     language: python
     createdAt: '2023-01-25 19:43:31'
     datasets:
@@ -23,6 +30,7 @@ pipelines:
       - datasets/Gold_Credit_DTI_SCD1_CatalogTable
       - datasets/Gold_Credit_DTI_SCD2_CatalogTable
       - datasets/Gold_Credit_DTI_SCD3_CatalogTable
+    subgraphs: []
     dependencies: {}
 datasets:
   datasets/creditReportXMLingest:
@@ -623,13 +631,23 @@ jobs:
     enabled: false
     createdAt: '2023-01-18 02:30:06'
     author: sparklearner123@gmail.com
-libraries: []
+gemContainer:
+  languageVersion: ''
+  gemLibsVersion: ''
+  gems: {}
+functions:
+  author: null
+  createdAt: '2023-03-24 09:25:48'
+  udfs: {}
+  udafs: {}
+  expressions: {}
 subgraphs:
   subgraphs/BNPL_API:
     name: BNPL_API
     description: ''
     author: sparklearner123@gmail.com
     language: python
+    artefactID: ''
     mode: batch
     createdAt: '2023-01-18 01:53:19'
   subgraphs/CreateDTIMetrics:
@@ -637,6 +655,7 @@ subgraphs:
     description: ''
     author: sparklearner123@gmail.com
     language: python
+    artefactID: ''
     mode: batch
     createdAt: '2023-01-11 16:35:29'
   subgraphs/CalculateDebtAndIncome:
@@ -644,6 +663,7 @@ subgraphs:
     description: ''
     author: sparklearner123@gmail.com
     language: python
+    artefactID: ''
     mode: batch
     createdAt: '2023-01-11 03:28:24'
   subgraphs/TestAuditPrepGraph:
@@ -651,6 +671,7 @@ subgraphs:
     description: ''
     author: sparklearner123@gmail.com
     language: python
+    artefactID: ''
     mode: batch
     createdAt: '2023-01-19 18:53:13'
   subgraphs/PrepDTI:
@@ -659,6 +680,7 @@ subgraphs:
       LexisNexis, and self-reported credit. '
     author: sparklearner123@gmail.com
     language: python
+    artefactID: ''
     mode: batch
     createdAt: '2023-01-19 00:59:26'
   subgraphs/CreditDecisionLogic:
@@ -666,10 +688,31 @@ subgraphs:
     description: ''
     author: sparklearner123@gmail.com
     language: python
+    artefactID: ''
     mode: batch
     createdAt: '2023-01-31 22:46:53'
 sqlModels: {}
+sqlMacros: {}
+sqlSeeds: {}
+sqlSources: {}
+sqlUnreferencedSources: {}
 sqlPipeline: null
 dependencies: []
-projectDependencies: {}
+projectDependencies:
+  '34935':
+    projectUID: 34935
+    projectName: ProphecySparkBasicsPython
+    repositoryPath: gitUri=http://gitserver:3000/wD3Rheoe_team_8768/wD3Rheoe_project_34935.git&subPath=
+    version: 0.0.2
+    isDefault: true
+    author: null
+    createdAt: '2023-09-04 08:41:43'
+  '34936':
+    projectUID: 34936
+    projectName: ProphecyWarehousePython
+    repositoryPath: gitUri=http://gitserver:3000/wD3Rheoe_team_8768/wD3Rheoe_project_34936.git&subPath=
+    version: 0.0.1
+    isDefault: true
+    author: null
+    createdAt: '2023-09-04 08:41:43'
 pipelineConfigurations: {}
